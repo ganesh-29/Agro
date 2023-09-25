@@ -1,5 +1,41 @@
-extends layout
+html
 
-block content
-    h1 seeds
-    p For yeild choose the better seed
+    head    
+        style.
+            .imgcontainer{
+                display:flex;
+
+            }
+            img {
+                margin:20px;
+                width:250px;
+                height:255px;
+            }
+            .imgcontainerchild{
+                width:350px;
+                margin:20px;
+            }
+
+    body 
+    
+    h1 Seeds
+    div.imgcontainer
+        div.imgcontainerchild
+            img(src=s1.image)
+            p #{s1.name}
+            span #{s1.price} ₹
+        div.imgcontainerchild
+            img(src=s2.image)
+            p #{s2.name}
+            span #{s2.price} ₹
+        div.imgcontainerchild
+            img(src=s3.image)
+            p #{s3.name}
+            span #{s3.price} ₹
+            strike 200
+        div.imgcontainerchild
+            img(src=s4.image)
+            p #{s4.name}
+            span #{s4.price} ₹
+            strike 300
+    a(href="/") Previous

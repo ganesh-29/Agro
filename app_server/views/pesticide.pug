@@ -1,6 +1,47 @@
-extends layout
+html 
+    head    
+        style.
+            .imgcontainer{
+                display:flex;
 
-block content
-  h1 Pesticide
-  p save your crop from the harmfull insects
-  a(href="/fertilizer/pesticide/organic/new") orgainc
+            }
+            img {
+                margin:20px;
+                width:250px;
+                height:250px;
+            }
+            .imgcontainerchild{
+                width:350px;
+                margin:20px;
+            }
+
+    body 
+    
+    h1 Pesticide
+    div.imgcontainer
+        div.imgcontainerchild
+            img(src=p1.image)
+            p #{p1.name}
+            span #{p1.price} ₹
+        div.imgcontainerchild
+            img(src=p2.image)
+            p #{p2.name}
+            span #{p2.price} ₹
+        div.imgcontainerchild
+            img(src=p3.image)
+            p #{p3.name}
+            span #{p3.price} ₹
+            strike 200
+        div.imgcontainerchild
+            img(src=p4.image)
+            p #{p4.name}
+            span #{p4.price} ₹
+            strike 300
+        div.imgcontainerchild
+            img(src=p5.image)
+            p #{p5.name}
+            span #{p5.price} ₹
+            strike 300
+    a(href="/fertilizer") Previous
+    br.
+    a(href="/fertilizer/pesticide/organic/new") NEXT

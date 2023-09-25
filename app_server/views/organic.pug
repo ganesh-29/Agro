@@ -1,5 +1,40 @@
-extends layout
+html 
+    head    
+        style.
+            .imgcontainer{
+                display:flex;
 
-block content
-    h1 organic fertilizers 
-    p less effect the diversity and give the more life
+            }
+            img {
+                margin:20px;
+                width:250px;
+                height:255px;
+            }
+            .imgcontainerchild{
+                width:350px;
+                margin:20px;
+            }
+
+    body 
+    
+    h1 Organic Fertilizers And Pesticides
+    div.imgcontainer
+        div.imgcontainerchild
+            img(src=o1.image)
+            p #{o1.name}
+            span #{o1.price} ₹
+        div.imgcontainerchild
+            img(src=o2.image)
+            p #{o2.name}
+            span #{o2.price} ₹
+        div.imgcontainerchild
+            img(src=o3.image)
+            p #{o3.name}
+            span #{o3.price} ₹
+            strike 200
+        div.imgcontainerchild
+            img(src=o4.image)
+            p #{o4.name}
+            span #{o4.price} ₹
+            strike 300
+    a(href="/fertilizer/pesticide/new") Previous

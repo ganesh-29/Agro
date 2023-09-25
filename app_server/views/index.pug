@@ -1,15 +1,27 @@
-extends layout
+html 
+  head 
+    style. 
+      h1 {
+        text-align: center;
+        color: green;
+      }
+      div{
+        font-size: 25px;
+      }
+      body{
+        background-image: url('https://img.etimg.com/thumb/msid-87972968,width-300,height-225,imgsize-209780,,resizemode-75/1-bccl.jpg');
+        background-size: cover;
+      }
 
-block content
-  h1= title
-  p Welcome to #{title}
-  a(href="/fertilizer") fertilizer
-  div 
-  a(href="fertilizer/pesticide/new") pesticide
-  div 
-  a(href="/fertilizer/pesticide./organic/new") orgainc
-  div 
-  a(href='/seeds') Seeds
-  div 
+  body 
+    h1 Welcome to #{title}
+    div 
+      a(href="/fertilizer") fertilizer
+      br 
+      a(href="fertilizer/pesticide/new") pesticide
+      br 
+      a(href="/fertilizer/pesticide./organic/new") orgainc
+      br 
+      a(href='/seeds') Seeds 
 
 
