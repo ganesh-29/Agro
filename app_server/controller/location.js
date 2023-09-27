@@ -1,39 +1,40 @@
+var request = require('request');
+var apiOptions = {
+  server : "http://localhost:3000"
+};
 const homelist = (req, res) => {
     res.render('index', { title: "Agrofests" });
 
 };
+
+
+
+// -------------------------------fertilizer page--------------------------
+const renderfertilizer = (req, res, fertilizerdata) => {
+    console.log("received data:"+fertilizerdata);
+    res.render('fertilizers',{fertilizerdata});
+}
 const fertilizer = (req, res) => {
-    res.render('fertilizers',
-        {
-            title: "Fertilizers",
-            f1: {
-                image: 'https://www.bighaat.com/cdn/shop/products/pouch-normal-1_1800x1800.jpg?v=1681205567',
-                name: 'KATYAYANI ACTIVATED HUMIC ACID, FULVIC ACID FERTILIZER',
-                price:279,
-            },
-            f2: {
-                image: 'https://www.bighaat.com/cdn/shop/products/Artboard1copy8_1_479f44b9-a242-4171-a423-99fb03ac7464_1800x1800.webp?v=1673948341',
-                name: 'MULTIPLEX MANGANESE MICRONUTRIENT FERTILIZER',
-                price:300,
-
-            },
-            f3:{
-                image:'https://www.bighaat.com/cdn/shop/products/WhatsAppImage2022-01-17at4.57.59PM_1800x1800.jpg?v=1642509663',
-                name:'ANAND AGRO INSTA BOR 20% - FERTILIZERS',
-                price:150
-            },
-            f4:{
-                image:'https://www.bighaat.com/cdn/shop/products/POMEGRANATE-removebg-preview_1800x1800.png?v=1642774432',
-                name:'AMRUTH POMEGRANATE GROW (FERTILIZERS)',
-                price:200,
-            }
-
-        });
+    var requestOptions, path;
+  path = '/api/fertilizers';
+  requestOptions = {
+    url : apiOptions.server + path,
+    method : "GET",
+    json : {},
+  };
+  request(
+    requestOptions,
+    function(err, response, body) {
+      var i, data;
+      renderfertilizer(req, res, body);
+    }
+  );
 };
+// -------------------------------pesticide page--------------------------
 const pesticide = (req, res) => {
     res.render('pesticide',
      {
-         title: "Pesticide." ,
+         title: "Agrofests" ,
         p1: {
             image:'https://www.bighaat.com/cdn/shop/files/2_7ce4741d-1c4e-4de7-8dee-5669cdd3e5bb_1800x1800.webp?v=1683894692',
             name:'NANOBEE AGROKILL INSECTICIDE',
@@ -62,9 +63,10 @@ const pesticide = (req, res) => {
     
     });
 };
+// -------------------------------organic page--------------------------
 const organic = (req, res) => {
     res.render('organic', 
-    { title: "organicfertilizers and organicPesticides",
+    { title: "Agrofests",
     o1: {
         image:'https://www.bighaat.com/cdn/shop/products/1_4_555bb7a3-042e-4390-857a-6a8df8d7d03a_1800x1800_2_1800x1800.webp?v=1674564560',
         name:'DR SOIL ARECA SPECIAL BIO FERTILIZER',
@@ -88,9 +90,36 @@ const organic = (req, res) => {
 
  });
 };
+// -------------------------------seeds page--------------------------
+const seeds = (req, res) => {
+    res.render('seeds',
+     { title: 'Agrofests',
+    s1:{
+        image:'https://www.bighaat.com/cdn/shop/products/P3401-CORN_1800x1800.jpg?v=1601728758',
+        name:'P3401 CORN',
+        price:2900
+    },
+    s2:{
+        image: 'https://www.bighaat.com/cdn/shop/products/advanta-pac-837_1800x1800.jpg?v=1623755110',
+        name:'PAC837 HYBRID PADDY (RICE)',
+        price:9500
+    },
+    s3:{
+        image:'https://www.bighaat.com/cdn/shop/products/MAGNA-COTTON_RASI_800x.jpg?v=1601728013',
+        name:'MAGNA COTTON Rasi Seeds',
+        price:583
+    },
+    s4: {
+        image:'https://www.bighaat.com/cdn/shop/files/WhatsAppImage2023-08-22at11.22.59_ChengalarayaJayasek_1800x1800.jpg?v=1694597733',
+        name:'IMPROVED BLACK MUSTARD SEEDS',
+        price:595
+    }
+    });
+};
 module.exports = {
     homelist,
     fertilizer,
     pesticide,
     organic,
+    seeds,
 };

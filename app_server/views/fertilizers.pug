@@ -15,29 +15,67 @@ html
                 width:350px;
                 margin:20px;
             }
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            h1 {
+                text-align: center;
+                color: brown;
+                font-size: 30px;
+            }
+            div{
+                font-size: 25px;
+            }
+            body{
+                background-image: url('https://img.freepik.com/premium-photo/asian-farmer-spraying-fertilizer-young-green-rice-field_30478-5095.jpg');
+                //- background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            .navbar{
+                gap: 20px;
+                margin: 0 0 0 50%;
+            }
+            a{
+                margin: 15px 0 15px 10px;
+                text-decoration: none;
+                color:black;
+            }
+            .navbarsec{
+                display:flex;
+                background-color:white;
+                padding:15px;
+            }
 
     body 
-    
-    h1 fertilizers
-    div.imgcontainer
-        div.imgcontainerchild
-            img(src=f1.image)
-            p #{f1.name}
-            span #{f1.price} ₹
-        div.imgcontainerchild
-            img(src=f2.image)
-            p #{f2.name}
-            span #{f2.price} ₹
-        div.imgcontainerchild
-            img(src=f3.image)
-            p #{f3.name}
-            span #{f3.price} ₹
-            strike 200
-        div.imgcontainerchild
-            img(src=f4.image)
-            p #{f4.name}
-            span #{f4.price} ₹
-            strike 300
-    a(href="fertilizer/pesticide/new") Next
-    br
-    a(href="/") Previous
+        section.navbarsec
+            h1 #{title}
+            div.navbar
+                a(href="/fertilizer") fertilizer
+                a(href="/fertilizer/pesticide/new") pesticide
+                a(href="/fertilizer/pesticide/organic/new") organic
+                a(href='/seeds') Seeds 
+        h1 fertilizers
+        div.imgcontainer
+            div hi 
+            p #{fertilizerdata.name}
+            //- div.imgcontainerchild
+            //-     img(src=f1.image)
+            //-     p #{f1.name}
+            //-     span #{f1.price} ₹
+            //- div.imgcontainerchild
+            //-     img(src=f2.image)
+            //-     p #{f2.name}
+            //-     span #{f2.price} ₹
+            //- div.imgcontainerchild
+            //-     img(src=f3.image)
+            //-     p #{f3.name}
+            //-     span #{f3.price} ₹
+            //-     strike 200
+            //- div.imgcontainerchild
+            //-     img(src=f4.image)
+            //-     p #{f4.name}
+            //-     span #{f4.price} ₹
+            //-     strike 300

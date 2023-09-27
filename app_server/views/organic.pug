@@ -14,8 +14,49 @@ html
                 width:350px;
                 margin:20px;
             }
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            h1 {
+                text-align: center;
+                color: brown;
+                font-size: 30px;
+            }
+            div{
+                font-size: 25px;
+            }
+            body{
+                background-image: url('https://img.freepik.com/premium-photo/asian-farmer-spraying-fertilizer-young-green-rice-field_30478-5095.jpg');
+                //- background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+            .navbar{
+                gap: 20px;
+                margin: 0 0 0 50%;
+            }
+            a{
+                margin: 15px 0 15px 10px;
+                text-decoration: none;
+                color:black;
+
+            }
+            .navbarsec{
+                display:flex;
+                background-color:white;
+                padding:15px;
+            }
 
     body 
+        section.navbarsec
+            h1 #{title}
+            div.navbar
+                a(href="/fertilizer") fertilizer
+                a(href="/fertilizer/pesticide/new") pesticide
+                a(href="/fertilizer/pesticide/organic/new") organic
+                a(href='/seeds') Seeds 
         h1 Organic Fertilizers And Pesticides
         div.imgcontainer
             div.imgcontainerchild
@@ -36,6 +77,3 @@ html
                 p #{o4.name}
                 span #{o4.price} ₹
                 strike 300
-        a(href="/fertilizer/pesticide/new") Previous
-        br
-        a(href='/seeds') Next

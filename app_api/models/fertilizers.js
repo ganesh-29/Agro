@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-
 const fertilizerschema = new mongoose.Schema({
   image: {
     type: String,
@@ -8,6 +7,9 @@ const fertilizerschema = new mongoose.Schema({
   name: {
     type: String,
     required: true
-  }
+  },
+  price: Number,
+  MRP: Number,
+  Quantity: String,
 });
-mongoose.model('fertilizer', fertilizerschema);
+mongoose.model('fertilizers', fertilizerschema);

@@ -1,12 +1,12 @@
 const mongoose = require('mongoose');
 const readLine = require('readline');
 
-let dbURL = 'mongodb://127.0.0.1/Loc8r';
+let dbURL = 'mongodb://127.0.0.1:27017/agro';
 if (process.env.NODE_ENV === 'production') {
   dbURL = process.env.DB_HOST || process.env.MONGODB_URI;
 }
 
-mongoose.connect("mongodb://127.0.0.1/Loc8r");
+mongoose.connect("mongodb://127.0.0.1:27017/agro");
 
 
 mongoose.connection.on('connected', () => {
@@ -56,4 +56,7 @@ process.on('SIGTERM', () => {
 });
 
 
-require('./location');
+require('./fertilizers');
+require('./pesticides');
+require('./organics');
+require('./seeds');
