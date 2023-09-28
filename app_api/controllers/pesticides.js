@@ -2,7 +2,24 @@ const mongoose = require('mongoose');
 const pesticides = mongoose.model('pesticides');
 
 
-
+const pesticidesReadAll = async (req, res) =>{
+  try {
+    const results = await pesticides.find();
+    
+    const respesticides = results.map(result => ({
+      _id: result._id,
+      name: result.name,
+      image:result.image,
+      price:result.price,
+      MRP:result.MRP,
+      Quantity:result.Quantity,
+    }));
+    res.status(200).json(respesticides);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ error: 'An error occurred while fetching movies.' });
+  }
+  };
 
 const pesticidesCreate = function (req, res) {
     pesticides.create({
@@ -150,6 +167,7 @@ const pesticidesDeleteOne = function (req, res) {
 };
 
 module.exports = {
+  pesticidesReadAll,
   pesticidesCreate,
   pesticidesReadOne,
   pesticidesUpdateOne,

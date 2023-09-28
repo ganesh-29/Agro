@@ -48,34 +48,51 @@ html
                 background-color:white;
                 padding:15px;
             }
+            .imgcontainerchild{
+                background-color:grey;
+                border-radius:20px;
+                padding:30px;
+            }
 
     body 
         section.navbarsec
-            h1 #{title}
+            h1 Agrofests
             div.navbar
-                a(href="/fertilizer") fertilizer
-                a(href="/fertilizer/pesticide/new") pesticide
-                a(href="/fertilizer/pesticide/organic/new") organic
+                a(href="/fertilizers") fertilizer
+                a(href="/pesticides") pesticide 
+                a(href="/organics") organic
                 a(href='/seeds') Seeds 
         h1 fertilizers
         div.imgcontainer
-            div hi 
-            p #{fertilizerdata.name}
-            //- div.imgcontainerchild
-            //-     img(src=f1.image)
-            //-     p #{f1.name}
-            //-     span #{f1.price} ₹
-            //- div.imgcontainerchild
-            //-     img(src=f2.image)
-            //-     p #{f2.name}
-            //-     span #{f2.price} ₹
-            //- div.imgcontainerchild
-            //-     img(src=f3.image)
-            //-     p #{f3.name}
-            //-     span #{f3.price} ₹
-            //-     strike 200
-            //- div.imgcontainerchild
-            //-     img(src=f4.image)
-            //-     p #{f4.name}
-            //-     span #{f4.price} ₹
-            //-     strike 300
+            div.imgcontainerchild
+                img(src=fertilizerdata[0].image)
+                p #{fertilizerdata[0].name}
+                p #{fertilizerdata[0].Quantity}
+                span #{fertilizerdata[0].MRP} 
+                br
+                span #{fertilizerdata[0].price} ₹
+                strike #{fertilizerdata[0].MRP-fertilizerdata[0].price}
+            div.imgcontainerchild
+                img(src=fertilizerdata[1].image)
+                p #{fertilizerdata[1].name}
+                p #{fertilizerdata[1].Quantity}
+                span #{fertilizerdata[1].MRP} 
+                br
+                span #{fertilizerdata[1].price} ₹
+                strike #{fertilizerdata[1].MRP-fertilizerdata[0].price}
+            div.imgcontainerchild
+                img(src=fertilizerdata[2].image)
+                p #{fertilizerdata[2].name}
+                p #{fertilizerdata[2].Quantity}
+                span #{fertilizerdata[2].MRP} 
+                br
+                span #{fertilizerdata[2].price} ₹
+                strike #{fertilizerdata[2].MRP-fertilizerdata[0].price}
+            div.imgcontainerchild
+                img(src=fertilizerdata[3].image)
+                p #{fertilizerdata[3].name}
+                p #{fertilizerdata[3].Quantity}
+                span #{fertilizerdata[3].MRP} 
+                br
+                span #{fertilizerdata[3].price} ₹
+                strike #{fertilizerdata[3].MRP-fertilizerdata[0].price}

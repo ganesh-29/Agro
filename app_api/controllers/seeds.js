@@ -1,7 +1,24 @@
 const mongoose = require('mongoose');
 const seeds = mongoose.model('seeds');
 
-
+const seedsReadAll = async (req, res) =>{
+  try {
+    const results = await seeds.find();
+    
+    const resseeds = results.map(result => ({
+      _id: result._id,
+      name: result.name,
+      image:result.image,
+      price:result.price,
+      MRP:result.MRP,
+      Quantity:result.Quantity,
+    }));
+    res.status(200).json(resseeds);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ error: 'An error occurred while fetching movies.' });
+  }
+  };
 
 
 const seedsCreate = function (req, res) {
@@ -150,6 +167,7 @@ const seedsDeleteOne = function (req, res) {
 };
 
 module.exports = {
+  seedsReadAll,
   seedsCreate,
   seedsReadOne,
   seedsUpdateOne,

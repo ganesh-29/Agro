@@ -12,8 +12,8 @@ html
                 height:255px;
             }
             .imgcontainerchild{
-                width:350px;
-                margin:20px;
+                width:310px;
+                margin:15px;
             }
             *{
                 margin: 0;
@@ -49,32 +49,51 @@ html
                 background-color:white;
                 padding:15px;
             }
+            .imgcontainerchild{
+                background-color:grey;
+                border-radius:20px;
+                padding:30px;
+            }
 
     body 
         section.navbarsec
-            h1 #{title}
+            h1 Agrofests
             div.navbar
-                a(href="/fertilizer") fertilizer
-                a(href="/fertilizer/pesticide/new") pesticide
-                a(href="/fertilizer/pesticide/organic/new") organic
+                a(href="/fertilizers") fertilizer
+                a(href="/pesticides") pesticide 
+                a(href="/organics") organic
                 a(href='/seeds') Seeds 
         h1 Seeds
         div.imgcontainer
             div.imgcontainerchild
-                img(src=s1.image)
-                p #{s1.name}
-                span #{s1.price} ₹
+                img(src=seedsdata[0].image)
+                p #{seedsdata[0].name}
+                p #{seedsdata[0].Quantity}
+                span #{seedsdata[0].MRP} 
+                br
+                span #{seedsdata[0].price} ₹
+                strike #{seedsdata[0].MRP - seedsdata[0].price}
             div.imgcontainerchild
-                img(src=s2.image)
-                p #{s2.name}
-                span #{s2.price} ₹
+                img(src = seedsdata[1].image)
+                p #{seedsdata[1].name}
+                p #{seedsdata[1].Quantity}
+                span #{seedsdata[1].MRP} 
+                br
+                span #{seedsdata[1].price} ₹
+                strike #{seedsdata[1].MRP - seedsdata[0].price}
             div.imgcontainerchild
-                img(src=s3.image)
-                p #{s3.name}
-                span #{s3.price} ₹
-                strike 200
+                img(src = seedsdata[2].image)
+                p #{seedsdata[2].name}
+                p #{seedsdata[2].Quantity}
+                span #{seedsdata[2].MRP} 
+                br
+                span #{seedsdata[2].price} ₹
+                strike #{seedsdata[2].MRP - seedsdata[0].price}
             div.imgcontainerchild
-                img(src=s4.image)
-                p #{s4.name}
-                span #{s4.price} ₹
-                strike 300
+                img(src = seedsdata[3].image)
+                p #{seedsdata[3].name}
+                p #{seedsdata[3].Quantity}
+                span #{seedsdata[3].MRP} 
+                br
+                span #{seedsdata[3].price} ₹
+                strike #{seedsdata[3].MRP - seedsdata[0].price}

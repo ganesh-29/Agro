@@ -48,32 +48,50 @@ html
                 background-color:white;
                 padding:15px;
             }
-
+            ..imgcontainerchild{
+                background-color:grey;
+                border-radius:20px;
+                padding:30px;
+            }
     body 
         section.navbarsec
-            h1 #{title}
+            h1 Agrofests
             div.navbar
-                a(href="/fertilizer") fertilizer
-                a(href="/fertilizer/pesticide/new") pesticide
-                a(href="/fertilizer/pesticide/organic/new") organic
+                a(href="/fertilizers") fertilizer
+                a(href="/pesticides") pesticide 
+                a(href="/organics") organic
                 a(href='/seeds') Seeds 
-        h1 Organic Fertilizers And Pesticides
+        h1 Organics
         div.imgcontainer
             div.imgcontainerchild
-                img(src=o1.image)
-                p #{o1.name}
-                span #{o1.price} ₹
+                img(src=organicsdata[0].image)
+                p #{organicsdata[0].name}
+                p #{organicsdata[0].Quantity}
+                span #{organicsdata[0].MRP} 
+                br
+                span #{organicsdata[0].price} ₹
+                strike #{organicsdata[0].MRP-organicsdata[0].price}
             div.imgcontainerchild
-                img(src=o2.image)
-                p #{o2.name}
-                span #{o2.price} ₹
+                img(src=organicsdata[1].image)
+                p #{organicsdata[1].name}
+                p #{organicsdata[1].Quantity}
+                span #{organicsdata[1].MRP} 
+                br
+                span #{organicsdata[1].price} ₹
+                strike #{organicsdata[1].MRP-organicsdata[0].price}
             div.imgcontainerchild
-                img(src=o3.image)
-                p #{o3.name}
-                span #{o3.price} ₹
-                strike 200
+                img(src=organicsdata[2].image)
+                p #{organicsdata[2].name}
+                p #{organicsdata[2].Quantity}
+                span #{organicsdata[2].MRP} 
+                br
+                span #{organicsdata[2].price} ₹
+                strike #{organicsdata[2].MRP-organicsdata[0].price}
             div.imgcontainerchild
-                img(src=o4.image)
-                p #{o4.name}
-                span #{o4.price} ₹
-                strike 300
+                img(src=organicsdata[3].image)
+                p #{organicsdata[3].name}
+                p #{organicsdata[3].Quantity}
+                span #{organicsdata[3].MRP} 
+                br
+                span #{organicsdata[3].price} ₹
+                strike #{organicsdata[3].MRP-organicsdata[0].price}

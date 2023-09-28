@@ -31,13 +31,14 @@ const fertilizersCreate = function (req, res) {
     }
   });
 };
+// ---------------------------------------------------read all-------------------------------
 const fertilizerReadAll = async (req, res) =>{
   try {
-    const results = await fertilizer.find();
+    const results = await fertilizers.find();
     
     const resfertilizers = results.map(result => ({
       _id: result._id,
-      title: result.title,
+      name: result.name,
       image:result.image,
       price:result.price,
       MRP:result.MRP,
@@ -45,6 +46,7 @@ const fertilizerReadAll = async (req, res) =>{
     }));
     res.status(200).json(resfertilizers);
   } catch (err) {
+    console.log(err);
     res.status(500).json({ error: 'An error occurred while fetching movies.' });
   }
   };

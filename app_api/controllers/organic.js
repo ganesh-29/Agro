@@ -2,7 +2,24 @@ const mongoose = require('mongoose');
 const organic = mongoose.model('organics');
 
 
-
+const organicReadAll = async (req, res) =>{
+  try {
+    const results = await organic.find();
+    
+    const resorganics = results.map(result => ({
+      _id: result._id,
+      name: result.name,
+      image:result.image,
+      price:result.price,
+      MRP:result.MRP,
+      Quantity:result.Quantity,
+    }));
+    res.status(200).json(resorganics);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ error: 'An error occurred while fetching movies.' });
+  }
+  };
 
 const organicCreate = function (req, res) {
     organic.create({
@@ -150,6 +167,7 @@ const organicDeleteOne = function (req, res) {
 };
 
 module.exports = {
+  organicReadAll,
   organicCreate,
   organicReadOne,
   organicUpdateOne,

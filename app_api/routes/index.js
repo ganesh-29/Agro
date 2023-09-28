@@ -18,46 +18,50 @@ router
   .get(fertilizers.fertilizersReadOne)
   .put(fertilizers.fertilizersUpdateOne)
   .delete(fertilizers.fertilizersDeleteOne);
+  module.exports = router;
 // --------------organics route-------------
   router
   .route('/organics')
-  .post(organics.fertilizersCreate);
+  .post(organics.organicCreate)
+  .get(organics.organicReadAll);
 
 router
   .route('/organics/:organicsid')
-  .get(organics.fertilizersReadOne)
-  .put(organics.fertilizersUpdateOne)
-  .delete(organics.fertilizersDeleteOne);
-  // --------------pests route-------------
+  .get(organics.organicReadOne)
+  .put(organics.organicUpdateOne)
+  .delete(organics.organicDeleteOne);
+//   // --------------pests route-------------
   router
   .route('/pesticides')
-  .post(pesticides.fertilizersCreate);
+  .post(pesticides.pesticidesCreate)
+  .get(pesticides.pesticidesReadAll)
 
 router
   .route('/pesticides/:pesticidesid')
-  .get(pesticides.fertilizersReadOne)
-  .put(pesticides.fertilizersUpdateOne)
-  .delete(pesticides.fertilizersDeleteOne);
+  .get(pesticides.pesticidesReadOne)
+  .put(pesticides.pesticidesUpdateOne)
+  .delete(pesticides.pesticidesDeleteOne);
 // --------------seeds rout-------------
   router
   .route('/seeds')
-  .post(seeds.fertilizersCreate);
+  .post(seeds.seedsCreate)
+  .get(seeds.seedsReadAll)
 
 router
   .route('/seeds/:seedsid')
-  .get(seeds.fertilizersReadOne)
-  .put(seeds.fertilizersUpdateOne)
-  .delete(seeds.fertilizersDeleteOne);
+  .get(seeds.seedsReadOne)
+  .put(seeds.seedsUpdateOne)
+  .delete(seeds.seedsDeleteOne);
 
   
-  module.exports = router;
-  // reviews
-  // router
-  //   .route('/locations/:locationid/reviews')
-  //   .post(ctrlReviews.reviewsCreate);
+//   module.exports = router;
+//   // reviews
+//   // router
+//   //   .route('/locations/:locationid/reviews')
+//   //   .post(ctrlReviews.reviewsCreate);
   
-  // router
-  //   .route('/locations/:locationid/reviews/:reviewid')
-  //   .get(ctrlReviews.reviewsReadOne)
-  //   .put(ctrlReviews.reviewsUpdateOne)
-  //   .delete(ctrlReviews.reviewsDeleteOne);
+//   // router
+//   //   .route('/locations/:locationid/reviews/:reviewid')
+//   //   .get(ctrlReviews.reviewsReadOne)
+//   //   .put(ctrlReviews.reviewsUpdateOne)
+//   //   .delete(ctrlReviews.reviewsDeleteOne);

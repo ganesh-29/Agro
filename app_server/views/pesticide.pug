@@ -48,37 +48,51 @@ html
                 background-color:white;
                 padding:15px;
             }
+            .imgcontainerchild{
+                background-color:grey;
+                border-radius:20px;
+                padding:30px;
+            }
 
     body 
         section.navbarsec
-            h1 #{title}
+            h1 Agrofests
             div.navbar
-                a(href="/fertilizer") fertilizer
-                a(href="/fertilizer/pesticide/new") pesticide
-                a(href="/fertilizer/pesticide/organic/new") organic
+                a(href="/fertilizers") fertilizer
+                a(href="/pesticides") pesticide 
+                a(href="/organics") organic
                 a(href='/seeds') Seeds 
-        h1 Pesticide
+        h1 Pesticides
         div.imgcontainer
             div.imgcontainerchild
-                img(src=p1.image)
-                p #{p1.name}
-                span #{p1.price} ₹
+                img(src=pesticidesdata[0].image)
+                p #{pesticidesdata[0].name}
+                p #{pesticidesdata[0].Quantity}
+                span #{pesticidesdata[0].MRP} 
+                br
+                span #{pesticidesdata[0].price} ₹
+                strike #{pesticidesdata[0].MRP-pesticidesdata[0].price}
             div.imgcontainerchild
-                img(src=p2.image)
-                p #{p2.name}
-                span #{p2.price} ₹
+                img(src=pesticidesdata[1].image)
+                p #{pesticidesdata[1].name}
+                p #{pesticidesdata[1].Quantity}
+                span #{pesticidesdata[1].MRP} 
+                br
+                span #{pesticidesdata[1].price} ₹
+                strike #{pesticidesdata[1].MRP-pesticidesdata[0].price}
             div.imgcontainerchild
-                img(src=p3.image)
-                p #{p3.name}
-                span #{p3.price} ₹
-                strike 200
+                img(src=pesticidesdata[2].image)
+                p #{pesticidesdata[2].name}
+                p #{pesticidesdata[2].Quantity}
+                span #{pesticidesdata[2].MRP} 
+                br
+                span #{pesticidesdata[2].price} ₹
+                strike #{pesticidesdata[2].MRP-pesticidesdata[0].price}
             div.imgcontainerchild
-                img(src=p4.image)
-                p #{p4.name}
-                span #{p4.price} ₹
-                strike 300
-            div.imgcontainerchild
-                img(src=p5.image)
-                p #{p5.name}
-                span #{p5.price} ₹
-                strike 300
+                img(src=pesticidesdata[3].image)
+                p #{pesticidesdata[3].name}
+                p #{pesticidesdata[3].Quantity}
+                span #{pesticidesdata[3].MRP} 
+                br
+                span #{pesticidesdata[3].price} ₹
+                strike #{pesticidesdata[3].MRP-pesticidesdata[0].price}
