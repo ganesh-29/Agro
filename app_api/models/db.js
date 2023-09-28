@@ -1,12 +1,13 @@
 const mongoose = require('mongoose');
 const readLine = require('readline');
 
-let dbURL = 'mongodb://127.0.0.1:27017/agro';
+// const dbURL = 'mongodb://127.0.0.1:27017/agro';
+const dbURL = 'mongodb+srv://KolluGaneshReddy:4sroIN2i8D3cCMQd@cluster0.z4wjxuj.mongodb.net/?retryWrites=true&w=majority'
 if (process.env.NODE_ENV === 'production') {
   dbURL = process.env.DB_HOST || process.env.MONGODB_URI;
 }
 
-mongoose.connect("mongodb://127.0.0.1:27017/agro");
+mongoose.connect(dbURL);
 
 
 mongoose.connection.on('connected', () => {
