@@ -28,11 +28,11 @@ html
                 font-size: 25px;
             }
             body{
-                background-image: url('https://images.pexels.com/photos/12925600/pexels-photo-12925600.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+                //- background-image: url('https://images.pexels.com/photos/12925600/pexels-photo-12925600.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+                //- //- background-size: cover;
+                //- background-repeat: no-repeat;
+                //- background-position: center;
                 //- background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
             }
             .navbar{
                 gap: 20px;
@@ -45,18 +45,19 @@ html
             }
             .navbarsec{
                 display:flex;
-                background-color:white;
+                background-color:orange;
                 padding:15px;
             }
             .imgcontainerchild{
                 background-color:grey;
-                border-radius:20px;
-                padding:30px;
+                border-radius:5px;
+                padding:20px;
             }
 
     body 
         section.navbarsec
-            h1 Agrofests
+            h1
+                a(href='/') Agrofests
             div.navbar
                 a(href="/fertilizers") fertilizer
                 a(href="/pesticides") pesticide 
