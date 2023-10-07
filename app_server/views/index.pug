@@ -1,51 +1,161 @@
-html 
-  head 
-    style. 
-      *{
+//- html 
+//-   head 
+//-     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Pacifico&display=swap" rel="stylesheet">
+//-     style. 
+//-       *{
+//-         margin: 0;
+//-         padding: 0;
+//-       }
+//-       h1 {
+//-         text-align: center;
+//-         color: brown;
+//-         font-family: 'Crimson Pro', serif;
+//-         font-size:32px;
+//-       }
+//-       div{
+//-         font-size: 25px;
+//-       }
+//-       body{
+//-         background-image: url('https://www.shreeramfertilizer.com/wp-content/uploads/2022/08/best-organic-fertilizer-8.jpg');
+//-         //- background-size: cover;
+//-         background-repeat: no-repeat;
+//-         background-position: center;
+//-         background-size: cover;
+//-       }
+//-       .navbar{
+//-         //- gap: 20px;
+//-         margin: 0 0 0 50%;
+//-       }
+//-       a{
+//-         margin: 15px 0 15px 10px;
+//-         text-decoration: none;
+//-         color:black;
+
+//-       }
+//-       .navbarsec{
+//-         padding: 0 0 0 10%;
+//-         display:flex;
+//-         background-color: orange;
+//-         padding:15px;
+//-       }
+//-       p{
+//-         font-size: 40px;
+//-         color :9d0208;
+//-         font-family: 'Crimson Pro', serif;
+//-         text-align: center ;
+//-         margin :auto;
+//-       }
+//-   body 
+//-     section.navbarsec
+//-       h1 Agrofests
+//-       div.navbar
+//-         a(href="/fertilizers") fertilizer
+//-         a(href="/pesticides") pesticide 
+//-         a(href="/organics") organic
+//-         a(href='/seeds') Seeds 
+//-     p Fertilize for Success with AgroFerts
+
+
+
+
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Pacifico&display=swap")
+    style.
+      * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
       }
-      h1 {
-        text-align: center;
-        color: brown;
-        font-size: 30px;
-      }
-      div{
-        font-size: 25px;
-      }
-      body{
+      body {
         background-image: url('https://www.shreeramfertilizer.com/wp-content/uploads/2022/08/best-organic-fertilizer-8.jpg');
-        //- background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        font-family: 'Crimson Pro', serif;
+        color: #333;
+        line-height: 1.6;
+        text-align: center;
       }
-      .navbar{
-        gap: 20px;
-        margin: 0 0 0 50%;
+      header.navbarsec {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        background: linear-gradient(90deg, rgba(255, 165, 0, 0.9) 0%, rgba(255, 87, 34, 0.9) 100%);
+        padding: 10px 0;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
       }
-      a{
-        margin: 15px 0 15px 10px;
+      ul.navbar {
+        margin-right: 10%;
+      }
+      ul.navbar li {
+        display: inline-block;
+        margin: 0 20px;
+        position: relative;
+      }
+      ul.navbar a {
         text-decoration: none;
-        color:black;
-
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+        transition: color 0.3s;
+        position: relative;
+        padding: 10px 0;
       }
-      .navbarsec{
-        padding: 0 0 0 10%;
-        display:flex;
-        background-color: white;
-        padding:15px;
+      ul.navbar a::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        bottom: 0;
+        left: 0;
+        background-color: #ff5722;
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 0.3s;
       }
-      .p{
-        text-size : 500px;
+      ul.navbar a:hover {
+        color: #ff5722;
       }
-  body 
-    section.navbarsec
-      h1 Agrofests
-      div.navbar
-        a(href="/fertilizers") fertilizer
-        a(href="/pesticides") pesticide 
-        a(href="/organics") organic
-        a(href='/seeds') Seeds 
+      ul.navbar li:hover a::before {
+        transform: scaleX(1);
+      }
+      main {
+        padding: 200px 0;
+      }
+      h1 {
+        text-align: center;
+        color: #fff;
+        font-size: 64px;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      p {
+        font-size: 24px;
+        color: #ff5722;
+        text-align: center;
+        margin: auto;
+        max-width: 600px;
+        line-height: 1.5;
+      }
 
-
+  body
+    header.navbarsec
+      h1 Agroferts
+      ul.navbar
+        li
+          a(href="/fertilizers") Fertilizers
+        li
+          a(href="/pesticides") Pesticides
+        li
+          a(href="/organics") Organics
+        li
+          a(href='/seeds') Seeds
+    main
+      h1 Fertilize for Success with AgroFerts
+      

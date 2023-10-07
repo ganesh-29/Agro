@@ -12,5 +12,7 @@ const pesticideschema = new mongoose.Schema({
   MRP: Number,
   SellPrice: Number,
   Quantity: String,
+  description: String,
+  availability: String,
 });
 mongoose.model('pesticides', pesticideschema);

@@ -1,6 +1,8 @@
 
 html 
-    head    
+    head 
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Pacifico&display=swap" rel="stylesheet">
+   
         style.
             .imgcontainer{
                 display:flex;
@@ -8,11 +10,11 @@ html
             }
             img {
                 margin:20px;
-                width:250px;
-                height:300px;
+                width:230px;
+                height:280px;
             }
             .imgcontainerchild{
-                width:350px;
+                width:330px;
                 margin:20px;
             }
             *{
@@ -22,7 +24,8 @@ html
             h1 {
                 text-align: center;
                 color: brown;
-                font-size: 30px;
+                font-family: 'Crimson Pro', serif;
+                font-size:32px;
             }
             div{
                 font-size: 25px;
@@ -45,11 +48,19 @@ html
             }
             .navbarsec{
                 display:flex;
-                background-color:orange;
+                background-color:87bba2;
                 padding:15px;
             }
+            .navbarsec .navbar a
+            {
+                background-color :16DB65;
+                padding:3px;
+                margin:3px;
+                color:white;
+                border-radius:8px;
+            }
             .imgcontainerchild{
-                background-color:grey;
+                background-color:f0ead2;
                 border-radius:5px;
                 padding:20px;
             }
@@ -66,34 +77,39 @@ html
         h1 fertilizers
         div.imgcontainer
             div.imgcontainerchild
-                img(src=fertilizerdata[0].image)
+                a(href='/fertilizerinfo/'+fertilizerdata[0]._id)
+                    img(src=fertilizerdata[0].image)
                 p #{fertilizerdata[0].name}
-                p #{fertilizerdata[0].Quantity}
-                span #{fertilizerdata[0].MRP} ₹
-                br
-                span #{fertilizerdata[0].price} ₹
-                strike #{fertilizerdata[0].MRP-fertilizerdata[0].price}
+                p  Quantity:#{fertilizerdata[0].Quantity}
+                
+                P MRP:₹
+                    strike #{fertilizerdata[0].MRP} 
+                    span ₹ #{fertilizerdata[0].MRP-fertilizerdata[0].price}(off)
+                span price:₹#{fertilizerdata[0].price} 
             div.imgcontainerchild
                 img(src=fertilizerdata[1].image)
                 p #{fertilizerdata[1].name}
-                p #{fertilizerdata[1].Quantity}
-                span #{fertilizerdata[1].MRP} ₹
-                br
-                span #{fertilizerdata[1].price} ₹
-                strike #{fertilizerdata[1].MRP-fertilizerdata[1].price}
+                p Quantity: #{fertilizerdata[1].Quantity}
+                p MRP:₹
+                    strike #{fertilizerdata[1].MRP}  
+                    span ₹#{fertilizerdata[1].MRP-fertilizerdata[1].price}(off)
+                span price: ₹#{fertilizerdata[1].price} 
             div.imgcontainerchild
                 img(src=fertilizerdata[2].image)
                 p #{fertilizerdata[2].name}
-                p #{fertilizerdata[2].Quantity}
-                span #{fertilizerdata[2].MRP} ₹
-                br
-                span #{fertilizerdata[2].price} ₹
-                strike #{fertilizerdata[2].MRP-fertilizerdata[2].price}
+                p Quantity: #{fertilizerdata[2].Quantity}
+                p MRP:₹
+                    strike #{fertilizerdata[2].MRP} 
+                    span ₹#{fertilizerdata[2].MRP-fertilizerdata[2].price}(off)
+                
+                span price:₹ #{fertilizerdata[2].price} 
+                
             div.imgcontainerchild
                 img(src=fertilizerdata[3].image)
                 p #{fertilizerdata[3].name}
-                p #{fertilizerdata[3].Quantity}
-                span #{fertilizerdata[3].MRP} ₹
-                br
-                span #{fertilizerdata[3].price} ₹
-                strike #{fertilizerdata[3].MRP-fertilizerdata[3].price}
+                p Quantity: #{fertilizerdata[3].Quantity}
+                p MRP:₹
+                    strike #{fertilizerdata[3].MRP} 
+                    span ₹ #{fertilizerdata[3].MRP-fertilizerdata[3].price}(off)
+                span price:₹ #{fertilizerdata[3].price} 
+                //- strike #{fertilizerdata[3].MRP-fertilizerdata[3].price}

@@ -1,6 +1,8 @@
 html
 
     head    
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Pacifico&display=swap" rel="stylesheet">
+
         style.
             .imgcontainer{
                 display:flex;
@@ -22,7 +24,8 @@ html
             h1 {
                 text-align: center;
                 color: brown;
-                font-size: 30px;
+                font-family: 'Crimson Pro', serif;
+                font-size:32px;
             }
             div{
                 font-size: 25px;
@@ -46,11 +49,19 @@ html
             }
             .navbarsec{
                 display:flex;
-                background-color:orange;
+                background-color:87bba2;
                 padding:15px;
             }
+            .navbarsec .navbar a
+            {
+                background-color :16DB65;
+                padding:3px;
+                margin:3px;
+                color:white;
+                border-radius:8px;
+            }
             .imgcontainerchild{
-                background-color:grey;
+                background-color:f0ead2;
                 border-radius:5px;
                 padding:20px;
             }
@@ -69,32 +80,36 @@ html
             div.imgcontainerchild
                 img(src=seedsdata[0].image)
                 p #{seedsdata[0].name}
-                p #{seedsdata[0].Quantity}
-                span #{seedsdata[0].MRP} ₹
-                br
-                span #{seedsdata[0].price} ₹
-                strike #{seedsdata[0].MRP - seedsdata[0].price}
+                p Quantity: #{seedsdata[0].Quantity}
+                p MRP:
+                    strike #{seedsdata[0].MRP} ₹
+                    span #{seedsdata[0].MRP - seedsdata[0].price}₹(off)
+                span price:#{seedsdata[0].price} ₹
+
             div.imgcontainerchild
                 img(src = seedsdata[1].image)
                 p #{seedsdata[1].name}
-                p #{seedsdata[1].Quantity}
-                span #{seedsdata[1].MRP} ₹
-                br
-                span #{seedsdata[1].price} ₹
-                strike #{seedsdata[1].MRP - seedsdata[1].price}
+                p Quantity: #{seedsdata[1].Quantity}
+                p MRP:
+                    strike  #{seedsdata[1].MRP} ₹
+                    span #{seedsdata[1].MRP - seedsdata[1].price}₹(off)
+                span price: #{seedsdata[1].price} ₹
+                
             div.imgcontainerchild
                 img(src = seedsdata[2].image)
                 p #{seedsdata[2].name}
-                p #{seedsdata[2].Quantity}
-                span #{seedsdata[2].MRP} ₹
-                br
-                span #{seedsdata[2].price} ₹
-                strike #{seedsdata[2].MRP - seedsdata[2].price}
+                p Quantity: #{seedsdata[2].Quantity}
+                p MRP:
+                    strike #{seedsdata[2].MRP} ₹
+                    span #{seedsdata[2].MRP - seedsdata[2].price}₹(off)
+                span price: #{seedsdata[2].price} ₹
+                
             div.imgcontainerchild
                 img(src = seedsdata[3].image)
                 p #{seedsdata[3].name}
-                p #{seedsdata[3].Quantity}
-                span #{seedsdata[3].MRP} ₹
-                br
-                span #{seedsdata[3].price} ₹
-                strike #{seedsdata[3].MRP - seedsdata[3].price}
+                p Quantity: #{seedsdata[3].Quantity}
+                p MRP: 
+                    strike #{seedsdata[3].MRP} ₹
+                    span #{seedsdata[3].MRP - seedsdata[3].price}₹(off)
+                span price: #{seedsdata[3].price} ₹
+                

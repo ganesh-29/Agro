@@ -1,5 +1,7 @@
 html 
-    head    
+    head   
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Pacifico&display=swap" rel="stylesheet">
+ 
         style.
             .imgcontainer{
                 display:flex;
@@ -21,7 +23,8 @@ html
             h1 {
                 text-align: center;
                 color: brown;
-                font-size: 30px;
+                font-family: 'Crimson Pro', serif;
+                font-size:32px;
             }
             div{
                 font-size: 25px;
@@ -45,11 +48,19 @@ html
             }
             .navbarsec{
                 display:flex;
-                background-color:orange;
+                background-color:87bba2;
                 padding:15px;
             }
+            .navbarsec .navbar a
+            {
+                background-color :16DB65;
+                padding:3px;
+                margin:3px;
+                color:white;
+                border-radius:8px;
+            }
             .imgcontainerchild{
-                background-color:grey;
+                background-color:f0ead2;
                 border-radius:5px;
                 padding:20px;
             }
@@ -68,32 +79,37 @@ html
             div.imgcontainerchild
                 img(src=pesticidesdata[0].image)
                 p #{pesticidesdata[0].name}
-                p #{pesticidesdata[0].Quantity}
-                span #{pesticidesdata[0].MRP} ₹ 
-                br
-                span #{pesticidesdata[0].price} ₹
-                strike #{pesticidesdata[0].MRP-pesticidesdata[0].price}
+                p Quantity:#{pesticidesdata[0].Quantity}
+                p MRP:
+                    strike #{pesticidesdata[0].MRP} ₹ 
+                    span #{pesticidesdata[0].MRP-pesticidesdata[0].price}₹(off)
+                span price: #{pesticidesdata[0].price} ₹
+                
+                    
             div.imgcontainerchild
                 img(src=pesticidesdata[1].image)
                 p #{pesticidesdata[1].name}
-                p #{pesticidesdata[1].Quantity}
-                span #{pesticidesdata[1].MRP} ₹
-                br
-                span #{pesticidesdata[1].price} ₹
-                strike #{pesticidesdata[1].MRP-pesticidesdata[1].price}
+                p Quantity:#{pesticidesdata[1].Quantity}
+                p MRP: 
+                    strike #{pesticidesdata[1].MRP} ₹
+                    span #{pesticidesdata[1].MRP-pesticidesdata[1].price}₹(off)
+                span price: #{pesticidesdata[1].price} ₹
+            
             div.imgcontainerchild
                 img(src=pesticidesdata[2].image)
                 p #{pesticidesdata[2].name}
-                p #{pesticidesdata[2].Quantity}
-                span #{pesticidesdata[2].MRP} ₹
-                br
-                span #{pesticidesdata[2].price} ₹
-                strike #{pesticidesdata[2].MRP-pesticidesdata[2].price}
+                p Qantity: #{pesticidesdata[2].Quantity}
+                p MRP:
+                    strike #{pesticidesdata[2].MRP} ₹
+                    span #{pesticidesdata[2].MRP-pesticidesdata[2].price}₹(off)
+                span price: #{pesticidesdata[2].price} ₹
+                
             div.imgcontainerchild
                 img(src=pesticidesdata[3].image)
                 p #{pesticidesdata[3].name}
-                p #{pesticidesdata[3].Quantity}
-                span #{pesticidesdata[3].MRP} ₹
-                br
-                span #{pesticidesdata[3].price} ₹
-                strike #{pesticidesdata[3].MRP-pesticidesdata[3].price}
+                p Qantity: #{pesticidesdata[3].Quantity}
+                p MRP: 
+                    strike #{pesticidesdata[3].MRP} ₹
+                    span #{pesticidesdata[3].MRP-pesticidesdata[3].price}₹(off)
+                span price: #{pesticidesdata[3].price} ₹
+                

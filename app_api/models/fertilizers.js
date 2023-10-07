@@ -11,5 +11,7 @@ const fertilizerschema = new mongoose.Schema({
   price: Number,
   MRP: Number,
   Quantity: String,
+  description: String,
+  availability: String,
 });
 mongoose.model('fertilizers', fertilizerschema);

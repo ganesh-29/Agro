@@ -87,7 +87,7 @@ const organic = async (req, res) => {
         console.error('Error:', err);
         // Handle the error, e.g., display an error message on the front end
         return;
-      }
+      } 
   
       
         renderOrganicsPage(req,res,body);
