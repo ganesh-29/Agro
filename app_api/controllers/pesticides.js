@@ -50,36 +50,20 @@ const pesticidesCreate = function (req, res) {
   });
 };
 
-const pesticidesReadOne = function (req, res) {
-  if (req.params && req.params.locationid) {
-    pesticides
-      .findById(req.params.locationid)
-      .exec((err, location) => {
-        if (!location) {
-          res	
-            .status(404) 
-            .json({	
-              "message": "locationid not found"
-            });	 
-          return;
-        } else if (err) {
-          res	
-            .status(404) 
-            .json(err); 
-          return; 	
-        }
-        res		
-          .status(200)
-          .json(location);
-      });
-  } else {		
-    res		
-      .status(404) 	
-      .json({	
-        "message": "No locationid in request"
-      });		
-  }
-};
+const pesticidesReadOne = async(req,res)=>{
+  const results=await pesticides.findById(req.params.pesticidesid);
+  // const resfertilizers = results.map(result => ({
+  //   _id: result._id,
+  //   name: result.name,
+  //   image:result.image,
+  //   price:result.price,
+  //   MRP:result.MRP,
+  //   Quantity:result.Quantity,
+  // }));
+  // console.log(results);
+  res.status(200)
+  .json(results);
+}
 
 const pesticidesUpdateOne = function (req, res) {
   if (!req.params.locationid) {

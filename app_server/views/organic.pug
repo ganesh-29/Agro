@@ -74,10 +74,11 @@ html
                 a(href="/pesticides") pesticide 
                 a(href="/organics") organic
                 a(href='/seeds') Seeds 
-        h1 Organics Fertilizers And Pesticides 
+        h1 Organic Fertilizers And Pesticides 
         div.imgcontainer
             div.imgcontainerchild
-                img(src=organicsdata[0].image)
+                a(href='/organics/'+organicsdata[0]._id)
+                    img(src=organicsdata[0].image)
                 p #{organicsdata[0].name}
                 p Quantity: #{organicsdata[0].Quantity}
                 p MRP:
@@ -86,7 +87,8 @@ html
                 span price: #{organicsdata[0].price} ₹
                 
             div.imgcontainerchild
-                img(src=organicsdata[1].image)
+                a(href='/organics/'+organicsdata[1]._id)
+                    img(src=organicsdata[1].image)
                 p #{organicsdata[1].name}
                 p Quantity: #{organicsdata[1].Quantity}
                 p MRP:
@@ -95,7 +97,8 @@ html
                 span price:#{organicsdata[1].price} ₹
                 
             div.imgcontainerchild
-                img(src=organicsdata[2].image)
+                a(href='/organics/'+organicsdata[2]._id)
+                    img(src=organicsdata[2].image)
                 p #{organicsdata[2].name}
                 p Quantity: #{organicsdata[2].Quantity}
                 p MRP:
@@ -104,7 +107,8 @@ html
                 span price: #{organicsdata[2].price} ₹
                 
             div.imgcontainerchild
-                img(src=organicsdata[3].image)
+                a(href='/organics/'+organicsdata[3]._id)
+                    img(src=organicsdata[3].image)
                 p #{organicsdata[3].name}
                 p Quantity: #{organicsdata[3].Quantity}
                 p MRP:

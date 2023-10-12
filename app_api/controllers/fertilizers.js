@@ -118,39 +118,51 @@ const fertilizerReadAll = async (req, res) =>{
 
 
 
+const fertilizersReadOne = async(req,res)=>{
+  const results=await fertilizers.findById(req.params.fertilizersid);
+  // const resfertilizers = results.map(result => ({
+  //   _id: result._id,
+  //   name: result.name,
+  //   image:result.image,
+  //   price:result.price,
+  //   MRP:result.MRP,
+  //   Quantity:result.Quantity,
+  // }));
+  res.status(200)
+  .json(results);
+}
 
 
-
-const fertilizersReadOne = function (req, res) {
-  if (req.params && req.params.fertilizersid) {
-    fertilizers
-      .findById(req.params.fertilizersid)
-      .exec((err, fertilizers) => {
-        if (!fertilizers) {
-          res	
-            .status(404) 
-            .json({	
-              "message": "locationid not found"
-            });	 
-          return;
-        } else if (err) {
-          res	
-            .status(404) 
-            .json(err); 
-          return; 	
-        }
-        res		
-          .status(200)
-          .json(fertilizers);
-      });
-  } else {		
-    res		
-      .status(404) 	
-      .json({	
-        "message": "No locationid in request"
-      });		
-  }
-};
+// const fertilizersReadOne = function (req, res) {
+//   if (req.params && req.params.fertilizersid) {
+//     fertilizers
+//       .findById(req.params.fertilizersid)
+//       .exec((err, fertilizers) => {
+//         if (!fertilizers) {
+//           res	
+//             .status(404) 
+//             .json({	
+//               "message": "locationid not found"
+//             });	 
+//           return;
+//         } else if (err) {
+//           res	
+//             .status(404) 
+//             .json(err); 
+//           return; 	
+//         }
+//         res		
+//           .status(200)
+//           .json(fertilizers);
+//       });
+//   } else {		
+//     res		
+//       .status(404) 	
+//       .json({	
+//         "message": "No locationid in request"
+//       });		
+//   }
+// };
 
 const fertilizersUpdateOne = function (req, res) {
   if (!req.params.locationid) {

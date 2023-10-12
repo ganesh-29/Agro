@@ -78,7 +78,8 @@ html
         h1 Seeds
         div.imgcontainer
             div.imgcontainerchild
-                img(src=seedsdata[0].image)
+                a(href='/seeds/'+seedsdata[0]._id)
+                    img(src=seedsdata[0].image)
                 p #{seedsdata[0].name}
                 p Quantity: #{seedsdata[0].Quantity}
                 p MRP:
@@ -87,7 +88,8 @@ html
                 span price:#{seedsdata[0].price} ₹
 
             div.imgcontainerchild
-                img(src = seedsdata[1].image)
+                a(href='/seeds/'+seedsdata[1]._id)
+                    img(src=seedsdata[1].image)
                 p #{seedsdata[1].name}
                 p Quantity: #{seedsdata[1].Quantity}
                 p MRP:
@@ -96,7 +98,8 @@ html
                 span price: #{seedsdata[1].price} ₹
                 
             div.imgcontainerchild
-                img(src = seedsdata[2].image)
+                a(href='/seeds/'+seedsdata[2]._id)
+                    img(src=seedsdata[2].image)
                 p #{seedsdata[2].name}
                 p Quantity: #{seedsdata[2].Quantity}
                 p MRP:
@@ -105,7 +108,8 @@ html
                 span price: #{seedsdata[2].price} ₹
                 
             div.imgcontainerchild
-                img(src = seedsdata[3].image)
+                a(href='/seeds/'+seedsdata[3]._id)
+                    img(src=seedsdata[3].image)
                 p #{seedsdata[3].name}
                 p Quantity: #{seedsdata[3].Quantity}
                 p MRP: 

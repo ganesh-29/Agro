@@ -50,36 +50,51 @@ const organicCreate = function (req, res) {
   });
 };
 
-const organicReadOne = function (req, res) {
-  if (req.params && req.params.locationid) {
-    organic
-      .findById(req.params.locationid)
-      .exec((err, location) => {
-        if (!location) {
-          res	
-            .status(404) 
-            .json({	
-              "message": "locationid not found"
-            });	 
-          return;
-        } else if (err) {
-          res	
-            .status(404) 
-            .json(err); 
-          return; 	
-        }
-        res		
-          .status(200)
-          .json(location);
-      });
-  } else {		
-    res		
-      .status(404) 	
-      .json({	
-        "message": "No locationid in request"
-      });		
-  }
-};
+const organicReadOne = async(req,res)=>{
+  const results=await organic.findById(req.params.organicsid);
+  // const resfertilizers = results.map(result => ({
+  //   _id: result._id,
+  //   name: result.name,
+  //   image:result.image,
+  //   price:result.price,
+  //   MRP:result.MRP,
+  //   Quantity:result.Quantity,
+  // }));
+  // console.log(results);
+  res.status(200)
+  .json(results);
+}
+
+// const organicReadOne = function (req, res) {
+//   if (req.params && req.params.locationid) {
+//     organic
+//       .findById(req.params.locationid)
+//       .exec((err, location) => {
+//         if (!location) {
+//           res	
+//             .status(404) 
+//             .json({	
+//               "message": "locationid not found"
+//             });	 
+//           return;
+//         } else if (err) {
+//           res	
+//             .status(404) 
+//             .json(err); 
+//           return; 	
+//         }
+//         res		
+//           .status(200)
+//           .json(location);
+//       });
+//   } else {		
+//     res		
+//       .status(404) 	
+//       .json({	
+//         "message": "No locationid in request"
+//       });		
+//   }
+// };
 
 const organicUpdateOne = function (req, res) {
   if (!req.params.locationid) {

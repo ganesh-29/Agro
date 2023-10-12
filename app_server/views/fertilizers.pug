@@ -77,7 +77,7 @@ html
         h1 fertilizers
         div.imgcontainer
             div.imgcontainerchild
-                a(href='/fertilizerinfo/'+fertilizerdata[0]._id)
+                a(href='/fertilizers/'+fertilizerdata[0]._id)
                     img(src=fertilizerdata[0].image)
                 p #{fertilizerdata[0].name}
                 p  Quantity:#{fertilizerdata[0].Quantity}
@@ -87,7 +87,8 @@ html
                     span ₹ #{fertilizerdata[0].MRP-fertilizerdata[0].price}(off)
                 span price:₹#{fertilizerdata[0].price} 
             div.imgcontainerchild
-                img(src=fertilizerdata[1].image)
+                a(href='/fertilizers/'+fertilizerdata[1]._id)
+                    img(src=fertilizerdata[1].image)
                 p #{fertilizerdata[1].name}
                 p Quantity: #{fertilizerdata[1].Quantity}
                 p MRP:₹
@@ -95,7 +96,8 @@ html
                     span ₹#{fertilizerdata[1].MRP-fertilizerdata[1].price}(off)
                 span price: ₹#{fertilizerdata[1].price} 
             div.imgcontainerchild
-                img(src=fertilizerdata[2].image)
+                a(href='/fertilizers/'+fertilizerdata[2]._id)
+                    img(src=fertilizerdata[2].image)
                 p #{fertilizerdata[2].name}
                 p Quantity: #{fertilizerdata[2].Quantity}
                 p MRP:₹
@@ -105,7 +107,8 @@ html
                 span price:₹ #{fertilizerdata[2].price} 
                 
             div.imgcontainerchild
-                img(src=fertilizerdata[3].image)
+                a(href='/fertilizers/'+fertilizerdata[3]._id)
+                    img(src=fertilizerdata[3].image)
                 p #{fertilizerdata[3].name}
                 p Quantity: #{fertilizerdata[3].Quantity}
                 p MRP:₹

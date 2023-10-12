@@ -1,9 +1,9 @@
 html
   head
-    title Fertilizer Details
+    title seed Details
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
     style.
-      .fertilizer-details {
+      .seed-details {
         background-color: #f7f7f7;
         padding: 20px;
         border-radius: 10px;
@@ -15,17 +15,17 @@ html
       }
   body
     .container
-      h1.text-center Fertilizer Details
-      .fertilizer-details
-        img(src=fertilizer.image)
-        h3 Fertilizer Name: #{fertilizer.name}
+      h1.text-center seed Details
+      .seed-details
+        img(src=seed.image)
+        h3 seed Name: #{seed.name}
         
-        p Description: #{fertilizer.desc}
-        p Price:₹ #{fertilizer.price} 
+        p Description: #{seed.desc}
+        p Price:₹ #{seed.price} 
         p MRP:₹
-            strike #{fertilizer.MRP}
-        p Discount:₹ #{fertilizer.MRP -fertilizer.price}
-        p Availability: #{fertilizer.avail}
+            strike #{seed.MRP}
+        p Discount:₹ #{seed.MRP -seed.price}
+        p Availability: #{seed.avail}
 
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js')
