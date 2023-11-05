@@ -1,6 +1,7 @@
+doctype html
 html
   head
-    title organic Details
+    title Organic Details
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
     style.
       .organic-details {
@@ -13,9 +14,41 @@ html
       .container {
         margin-top: 50px;
       }
+      .navbarsec {
+        display: flex;
+        background-color: #87bba2;
+        padding: 15px;
+      }
+      .navbarsec .navbar a {
+        background-color: #16DB65;
+        padding: 3px;
+        margin: 3px;
+        color: white;
+        border-radius: 8px;
+      }
+      .imgcontainerchild {
+        background-color: #f0ead2;
+        border-radius: 5px;
+        padding: 20px;
+      }
   body
+    section.navbarsec
+      h1
+        a(href='/') Agrofests
+      div.navbar
+        .btn-group
+          button.btn.btn-secondary.dropdown-toggle#productDropdown(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Products
+          ul.dropdown-menu
+            li
+              a.dropdown-item(href="/fertilizers") Fertilizers
+            li
+              a.dropdown-item(href="/pesticides") Pesticides
+            li
+              a.dropdown-item(href="/organics") Organics
+            li
+              a.dropdown-item(href="/seeds") Seeds
     .container
-      h1.text-center organic Details
+      h1.text-center Organic Details
       .organic-details
         img(src=organic.image)
         h3 organic Name: #{organic.name}
@@ -26,6 +59,7 @@ html
             strike #{organic.MRP}
         p Discount:₹ #{organic.MRP - organic.price}
         p Availability: #{organic.avail}
+
 
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js')

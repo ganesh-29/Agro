@@ -1,9 +1,10 @@
+doctype html
 html
   head
     title pesticide Details
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
     style.
-      .pesticide-details {
+      .organic-details {
         background-color: #f7f7f7;
         padding: 20px;
         border-radius: 10px;
@@ -13,19 +14,52 @@ html
       .container {
         margin-top: 50px;
       }
+      .navbarsec {
+        display: flex;
+        background-color: #87bba2;
+        padding: 15px;
+      }
+      .navbarsec .navbar a {
+        background-color: #16DB65;
+        padding: 3px;
+        margin: 3px;
+        color: white;
+        border-radius: 8px;
+      }
+      .imgcontainerchild {
+        background-color: #f0ead2;
+        border-radius: 5px;
+        padding: 20px;
+      }
   body
+    section.navbarsec
+      h1
+        a(href='/') Agrofests
+      div.navbar
+        .btn-group
+          button.btn.btn-secondary.dropdown-toggle#productDropdown(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Products
+          ul.dropdown-menu
+            li
+              a.dropdown-item(href="/fertilizers") Fertilizers
+            li
+              a.dropdown-item(href="/pesticides") Pesticides
+            li
+              a.dropdown-item(href="/organics") Organics
+            li
+              a.dropdown-item(href="/seeds") Seeds
     .container
       h1.text-center pesticide Details
-      .pesticide-details
+      .organic-details
         img(src=pesticide.image)
-        h3 pesticide Name: #{pesticide.name}
+        h3 organic Name: #{pesticide.name}
         
         p Description: #{pesticide.desc}
         p Price:₹ #{pesticide.price} 
         p MRP:₹
             strike #{pesticide.MRP}
-        p Discount:₹ #{pesticide.MRP -pesticide.price}
+        p Discount:₹ #{pesticide.MRP - pesticide.price}
         p Availability: #{pesticide.avail}
+
 
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js')
